@@ -1,0 +1,34 @@
+{
+  "name": "puhelinluettelobackend",
+  "version": "1.0.0",
+  "description": "Fullstack Part 11",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jslindgit/Fullstack_osa3.git"
+  },
+  "author": "Joonas Lindstedt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jslindgit/Fullstack_osa3/issues"
+  },
+  "homepage": "https://github.com/jslindgit/Fullstack_osa3#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.15",
+    "eslint": "^8.28.0",
+    "nodemon": "^2.0.20"
+  }
+}
