@@ -11,6 +11,7 @@ kill_timeout = 5
 processes = []
 
 [env]
+	PORT = "8080" # add this
 
 [experimental]
   allowed_public_ports = []
