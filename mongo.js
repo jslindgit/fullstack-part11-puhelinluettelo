@@ -26,15 +26,17 @@ if (process.argv.length >= 5) {
 		id: Math.floor(Math.random() * 1000000),
 	})
 
-	person.save().then(result => {
-		console.log(`added ${person.name} number ${person.number} to phonebook`)
+	person.save().then((result) => {
+		console.log(
+			`added ${person.name} number ${person.number} to phonebook:`,
+			result
+		)
 		mongoose.connection.close()
 	})
-}
-else {
+} else {
 	console.log('phonebook:')
-	Person.find({}).then(result => {
-		result.forEach(person => {
+	Person.find({}).then((result) => {
+		result.forEach((person) => {
 			console.log(`${person.name} ${person.number}`)
 		})
 		mongoose.connection.close()
