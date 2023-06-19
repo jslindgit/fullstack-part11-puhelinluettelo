@@ -15,10 +15,7 @@ module.exports = {
 		'object-curly-spacing': ['error', 'always'],
 		'arrow-spacing': ['error', { before: true, after: true }],
 		indent: ['error', 'tab'],
-		'linebreak-style': [
-			'error',
-			'windows', // Tällä asetuksella tulee herjoja tämän tiedoston rivinvaihdoista, mutta index.js:n rivinvaihdoista ei (käytän Windowsia) - en tiedä, miten tämän .eslintrc.js-tiedoston rivinvaihdot saisi "windowsmaisiksi", --fix ei tee asialle mitään.
-		],
+		'linebreak-style': ['error', 'unix'],
 		'no-console': 0,
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
