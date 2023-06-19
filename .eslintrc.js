@@ -9,6 +9,7 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 'latest',
 	},
+	plugins: ['react'],
 	rules: {
 		eqeqeq: 'error',
 		'no-trailing-spaces': 'error',
