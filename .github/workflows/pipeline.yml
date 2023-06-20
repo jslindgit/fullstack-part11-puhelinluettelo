@@ -20,6 +20,6 @@ jobs:
             - name: Install dependencies
               run: npm install
             - name: Install client dependencies
-			        run: npm run client-install
+              run: npm run client-install
             - name: Check style
               run: npm run lint
