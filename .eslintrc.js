@@ -6,9 +6,6 @@ module.exports = {
 	},
 	extends: ['eslint:recommended', 'plugin:react/recommended'],
 	overrides: [],
-	parserOptions: {
-		ecmaVersion: 12,
-	},
 	plugins: ['react'],
 	rules: {
 		eqeqeq: 'error',
