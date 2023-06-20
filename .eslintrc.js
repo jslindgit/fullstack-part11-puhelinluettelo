@@ -7,7 +7,7 @@ module.exports = {
 	extends: ['eslint:recommended', 'plugin:react/recommended'],
 	overrides: [],
 	parserOptions: {
-		ecmaVersion: 'latest',
+		ecmaVersion: 12,
 	},
 	plugins: ['react'],
 	rules: {
