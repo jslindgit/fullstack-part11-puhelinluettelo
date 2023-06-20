@@ -19,6 +19,7 @@ jobs:
             - uses: superfly/flyctl-actions/setup-flyctl@master
             - name: Install dependencies
               run: npm install
-			  run: npm run client-install
+            - name: Install client dependencies
+			        run: npm run client-install
             - name: Check style
               run: npm run lint
