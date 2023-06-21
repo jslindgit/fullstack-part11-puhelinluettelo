@@ -4,7 +4,6 @@
   "description": "Fullstack Part 11",
   "main": "index.js",
   "scripts": {
-    "build-client": "cd puhelinluettelo & npm run build",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",

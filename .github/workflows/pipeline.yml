@@ -24,8 +24,8 @@ jobs:
             - name: Check style
               run: npm run lint
             - name: Build
-              run: npm run
-            - name: Build2
               run: |
                   cd puhelinluettelo
-                  npm run
+                  npm run build
+                  cp -r ./build ../build
+                  cd ..
