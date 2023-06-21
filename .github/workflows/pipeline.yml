@@ -30,3 +30,9 @@ jobs:
                   cp -r ./build ../build
                   cd ..
                   ls -l
+            - name: e2e tests
+              uses: cypress-io/github-action@v5
+              with:
+                  command: npm run test:e2e
+                  start: npm start
+                  wait-on: http://localhost:3000
