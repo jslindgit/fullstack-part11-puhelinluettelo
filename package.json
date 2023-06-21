@@ -4,22 +4,15 @@
   "description": "Fullstack Part 11",
   "main": "index.js",
   "scripts": {
+	"build-client": "cd puhelinluettelo & npm run build",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "client-install": "npm install --prefix puhelinluettelo"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jslindgit/Fullstack_osa3.git"
-  },
   "author": "Joonas Lindstedt",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jslindgit/Fullstack_osa3/issues"
-  },
-  "homepage": "https://github.com/jslindgit/Fullstack_osa3#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

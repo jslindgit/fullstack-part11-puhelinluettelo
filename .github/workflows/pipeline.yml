@@ -23,3 +23,5 @@ jobs:
               run: npm run client-install
             - name: Check style
               run: npm run lint
+            - name: Build
+              run: npm run build-client
