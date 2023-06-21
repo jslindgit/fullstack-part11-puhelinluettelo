@@ -26,6 +26,6 @@ jobs:
             - name: Build
               run: npm run
             - name: Build2
-              run: cd puhelinluettelo
-            - name: Build3
-              run: npm run
+              run: |
+                  cd puhelinluettelo
+                  npm run
