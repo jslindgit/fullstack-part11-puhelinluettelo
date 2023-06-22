@@ -25,16 +25,16 @@ jobs:
               run: npm run lint
             - name: Build
               run: |
-                  cd puhelinluettelo
-                  npm run build
-                  cp -r ./build ../build
-                  cd ..
-                  ls -l
+                cd puhelinluettelo
+                npm run build
+                cp -r ./build ../build
+                cd ..
+                ls -l
         	  - name: start frontend
               run: |
-                  cd puhelinluettelo
-                  npm start
-                  cd ..
+                cd puhelinluettelo
+                npm start
+                cd ..
             - name: e2e tests
               uses: cypress-io/github-action@v5
               env:
