@@ -8,8 +8,9 @@
     "dev": "nodemon index.js",
     "lint": "eslint .",
     "start": "node index.js",
-    "start:test": "NODE_ENV=test node index.js",
-	"start:both": "node index.js & cd puhelinluettelo & npm start",
+	"start:client": "cd puhelinluettelo && npm start",
+    "start:test": "NODE_ENV=test node index.js",	
+	"start:both": "node index.js && cd puhelinluettelo && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:e2e": "cd puhelinluettelo && npm run test:e2e"
   },
