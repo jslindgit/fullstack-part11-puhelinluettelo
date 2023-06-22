@@ -30,14 +30,15 @@ jobs:
                   cp -r ./build ../build
                   cd ..
                   ls -l
+            - name: start backend
+              run: |
+                  npm start
+                  cd puhelinluettelo
             - name: e2e tests
               uses: cypress-io/github-action@v5
               env:
                   MONGODB_URI: ${{ secrets.MONGODB_URI }}
               with:
                   command: npm run test:e2e
-                  start: |
-                      npm start
-                      cd puhelinluettelo
-                      npm start
+                  start: npm start
                   wait-on: http://localhost:3000
