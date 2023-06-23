@@ -1,6 +1,9 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/api/persons' // <- local
-//const baseUrl = '/api/persons' // <- fly.io
+
+const baseUrl =
+    process.env.NODE_ENV === 'test'
+        ? 'http://localhost:3001/api/persons'
+        : '/api/persons'
 
 const deleteItem = (id) => {
     const request = axios.delete(`${baseUrl}/${id}`)
