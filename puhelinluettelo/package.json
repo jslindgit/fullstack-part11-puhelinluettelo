@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:test": "cross-env NODE_ENV=test react-scripts start",
+    "start:test": "cross-env NODE_ENV=test npm start",
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "react-scripts test",
     "test:e2e": "cypress run",
@@ -24,6 +24,7 @@
     "server": "json-server -p3001 --watch db.json",
     "cypress:open": "cypress open"
   },
+  "proxy": "http://localhost:3001",
   "browserslist": {
     "production": [
       ">0.2%",
