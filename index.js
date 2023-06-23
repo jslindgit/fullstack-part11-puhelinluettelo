@@ -53,6 +53,10 @@ app.get('/api/persons/:id', (req, res, next) => {
         .catch((error) => next(error))
 })
 
+app.get('/version', (req, res) => {
+    res.send('1.0')
+})
+
 app.delete('/api/persons/:id', (req, res, next) => {
     Person.findByIdAndRemove(req.params.id)
         .then((result) => {

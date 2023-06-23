@@ -8,9 +8,6 @@ const deleteItem = (id) => {
 }
 
 const getAll = () => {
-    console.log('baseUrl:', baseUrl)
-    console.log('process.env.NODE_ENV:', process.env.NODE_ENV)
-    console.log('process.env:', process.env)
     const request = axios.get(baseUrl)
     return request.then((response) => response.data)
 }

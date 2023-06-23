@@ -3,8 +3,6 @@ const mongoose = require('mongoose')
 //const url = `mongodb+srv://fullstack:${password}@cluster0.ge8s59g.mongodb.net/puhelinluetteloApp?retryWrites=true&w=majority`
 const url = process.env.MONGODB_URI
 
-console.log('process.env.MONGDB_URI:', process.env.MONGODB_URI)
-
 console.log('connecting to', url)
 mongoose
     .connect(url)
