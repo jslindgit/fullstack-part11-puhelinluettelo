@@ -1,9 +1,6 @@
 import axios from 'axios'
 
-const baseUrl =
-    process.env.NODE_ENV === 'test'
-        ? 'http://localhost:3001/api/persons'
-        : '/api/persons'
+const baseUrl = '/api/persons'
 
 const deleteItem = (id) => {
     const request = axios.delete(`${baseUrl}/${id}`)
