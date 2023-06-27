@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
     res.send('<h1>Puhelinluettelo backend</h1>')
 })
 
+app.get('/health', (req, res) => {
+    res.send('ok')
+})
+
 app.get('/info', (req, res) => {
     Person.find({}).then((persons) => {
         res.send(
@@ -54,7 +58,7 @@ app.get('/api/persons/:id', (req, res, next) => {
 })
 
 app.get('/version', (req, res) => {
-    res.send('1.0')
+    res.send('2')
 })
 
 app.delete('/api/persons/:id', (req, res, next) => {
