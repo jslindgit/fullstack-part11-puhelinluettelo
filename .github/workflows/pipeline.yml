@@ -59,3 +59,17 @@ jobs:
                   severity: error
                   description: Commit by ${{ github.event.commits[0].committer.username }} broke the build
                   webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+    tag_release:
+        needs: [simple_deployment_pipeline]
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+                with:
+                node-version: '18'
+            - name: Bump version and push tag
+                if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip')}}
+                uses: anothrNick/github-tag-action@72703d02f7df0cdb8f27aeb9feafeccd67b49881
+                env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    DEFAULT_BUMP: patch
